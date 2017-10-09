@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'] //what css files we want to apply
 })
 //Typescript Class
+//job is to glue it all together
 export class AppComponent {
 //member variable
   title = 'Things To Do';
@@ -21,6 +22,10 @@ export class AppComponent {
   thingsCompleted = [
     'Learn Typescript'
   ];
+
+  onNewItem(item: string) {
+    this.thingsToDo.push(item);
+  }
 
   // constructor() {
   //   //if you define a function with fat arrow syntax, you get more consisten behavior

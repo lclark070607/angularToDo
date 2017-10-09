@@ -5,6 +5,7 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './to-do-list.component.html',
   styleUrls: ['./to-do-list.component.css']
 })
+// job is to provide list, passive display of data
 export class ToDoListComponent implements OnInit {
   //modifing the definition of the variable heading
   //have to tell typescript that defines the variable
