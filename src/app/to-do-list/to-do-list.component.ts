@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-to-do-list',
@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./to-do-list.component.css']
 })
 export class ToDoListComponent implements OnInit {
-
+  //modifing the definition of the variable heading
+  //have to tell typescript that defines the variable
+  @Input() thingsToDo: string[];
+  
   constructor() { }
 
   ngOnInit() {

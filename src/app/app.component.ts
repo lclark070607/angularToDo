@@ -14,7 +14,8 @@ export class AppComponent {
   thingsToDo = [
     'Learn Javascript',
     'Learn Angular',
-    'Learn Redux'
+    'Learn Redux', 
+    'Learn Patience'
   ];
 
   thingsCompleted = [

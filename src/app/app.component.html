@@ -2,10 +2,10 @@
     <!-- The double curly braces around title mean go and interpolate the value of that variable into the html right here -->
     Welcome to {{title}}! 
   </h1>
-  <p *ngFor="let item of thingsToDo">{{item}}</p>
-  <p *ngIf="thingsCompleted.length == 0">Nothing completed</p>
-  <p>Summary: {{ summary() }}</p>
-  <app-to-do-list></app-to-do-list>
+
+  <!-- I want to pass whatevers on the right, evaluate it, and pass it into child component [] -->
+  <!-- "thingsToDo is a reference to an expression that gets evaluated in the parent" -->
+  <app-to-do-list [thingsToDo]="thingsToDo"></app-to-do-list>
   
  
 
