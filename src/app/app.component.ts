@@ -13,8 +13,23 @@ export class AppComponent {
 
   thingsToDo = [
     'Learn Javascript',
-    'Learn Typescript',
     'Learn Angular',
     'Learn Redux'
   ];
+
+  thingsCompleted = [
+    'Learn Typescript'
+  ];
+
+  // constructor() {
+  //   //if you define a function with fat arrow syntax, you get more consisten behavior
+  //   //callback function
+  //   setInterval(() => {
+  //     this.thingsToDo.push('make green tea');
+  //   }, 1000);
+  // }
+
+  summary(): string {
+    return `${this.thingsToDo.length} to do / ${this.thingsCompleted.length} done`;
+  }
 }
