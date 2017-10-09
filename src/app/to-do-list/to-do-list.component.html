@@ -1,3 +1,8 @@
 <ul>
-  <li *ngFor="let item of thingsToDo">{{item}}</li>
+  <li *ngFor="let item of thingsToDo">{{item | titlecase}}</li>
+  <!-- every pipe expression is a filter, pass what's on the left, take it's output -->
 </ul>
+<p>{{ 100.12345 | currency:"CAD":true:"1.2" | lowercase }}</p>
+<!-- pass paramters to a pipe with colons -->
+<!-- lots of pipes in Angular -->
+
