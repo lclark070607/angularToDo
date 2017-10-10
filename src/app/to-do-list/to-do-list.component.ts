@@ -19,7 +19,10 @@ export class ToDoListComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.thingsToDo = this.toDoService.getTasks();
+    // this.thingsToDo = this.toDoService.getTasks();
+    this.toDoService.getTasks().subscribe((newItems) => {
+      this.thingsToDo = newItems;
+    });
   }
 
 }
