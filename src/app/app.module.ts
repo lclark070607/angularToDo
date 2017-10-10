@@ -14,6 +14,7 @@ import { ToDoService } from './to-do.service';
 import { routeConfig } from './app.routes';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { ToDoDetailsComponent } from './to-do-details/to-do-details.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ContactComponent } from './contact/contact.component';
     ToDoPageComponent,
     TitlecasePipe,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    ToDoDetailsComponent
   ],
   imports: [
     BrowserModule,
