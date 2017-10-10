@@ -5,6 +5,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   templateUrl: './generic-input.component.html',
   styleUrls: ['./generic-input.component.css']
 })
+//is to pass text
 export class GenericInputComponent implements OnInit {
 
   @Output() newItem: EventEmitter<string> = new EventEmitter();

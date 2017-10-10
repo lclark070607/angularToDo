@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToDoService } from './to-do.service';
 
 //Decorator:  modify classes as they're being compiled
 @Component({
@@ -12,19 +13,14 @@ export class AppComponent {
 //member variable
   title = 'Things To Do';
 
-  thingsToDo = [
-    'Learn Javascript',
-    'Learn Angular',
-    'Learn Redux', 
-    'Learn Patience'
-  ];
-
   thingsCompleted = [
     'Learn Typescript'
   ];
 
+  constructor(private toDoService: ToDoService) {}
+
   onNewItem(item: string) {
-    this.thingsToDo.push(item);
+    this.toDoService.addItem(item);
   }
 
   // constructor() {
@@ -35,7 +31,7 @@ export class AppComponent {
   //   }, 1000);
   // }
 
-  summary(): string {
-    return `${this.thingsToDo.length} to do / ${this.thingsCompleted.length} done`;
-  }
+  // summary(): string {
+  //   return `${this.thingsToDo.length} to do / ${this.thingsCompleted.length} done`;
+  // }
 }

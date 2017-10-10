@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ToDoService } from '../to-do.service';
 
 @Component({
   selector: 'app-to-do-list',
@@ -9,11 +10,16 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ToDoListComponent implements OnInit {
   //modifing the definition of the variable heading
   //have to tell typescript that defines the variable
-  @Input() thingsToDo: string[];
+
+  //thingsToDo recieves array of strings
+  thingsToDo: string[];
   
-  constructor() { }
+  constructor(private toDoService: ToDoService) {
+
+   }
 
   ngOnInit() {
+    this.thingsToDo = this.toDoService.getTasks();
   }
 
 }
