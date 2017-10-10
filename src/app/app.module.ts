@@ -12,6 +12,8 @@ import { TitlecasePipe } from './titlecase.pipe';
 
 import { ToDoService } from './to-do.service';
 import { routeConfig } from './app.routes';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { routeConfig } from './app.routes';
     ToDoListComponent,
     GenericInputComponent,
     ToDoPageComponent,
-    TitlecasePipe
+    TitlecasePipe,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

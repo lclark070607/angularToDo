@@ -1,14 +1,25 @@
 <h1>
-  Welcome to {{title}}! 
+  Welcome to {{title}}!
 </h1>
+<!-- value on right side has to be inside an array -->
+<nav>
+  <a [routerLink]="['todo']">To Do</a>
+  <a [routerLink]="['about']">About Us</a>
+  <a [routerLink]="['contact']">Contact</a>
+</nav>
 
+<!-- pass an argument of 1 to the todo route, affects the url end -->
+<!-- <a [routerLink]="['about', 1]">About Us</a> -->
+
+<!-- Query Parameters are optional -->
+<!-- <a [routerLink]="['todo']" [queryParams]='{page:99}'>Go to Page 99</a> -->
 <router-outlet></router-outlet>
 
 <!-- MOVED BELOW TO TODOPAGE COMPONENT -->
 
 <!-- <h1> -->
-  <!-- The double curly braces around title mean go and interpolate the value of that variable into the html right here -->
-  <!-- Welcome to {{title}}! 
+<!-- The double curly braces around title mean go and interpolate the value of that variable into the html right here -->
+<!-- Welcome to {{title}}! 
 </h1>
 <app-to-do-list></app-to-do-list> -->
 
@@ -19,5 +30,3 @@
 <!-- How are we going to handle events? -->
 <!-- I wnat to get the things called newItem, call method called onNewItem, magic is $(event) means whatever event just arrived, pass it into the method onNewItem -->
 <!-- <app-generic-input (newItem)="onNewItem($event)"></app-generic-input> -->
- 
-
