@@ -1,15 +1,23 @@
-  <h1>
-    <!-- The double curly braces around title mean go and interpolate the value of that variable into the html right here -->
-    Welcome to {{title}}! 
-  </h1>
-  <app-to-do-list></app-to-do-list>
+<h1>
+  Welcome to {{title}}! 
+</h1>
 
-  <!-- I want to pass whatevers on the right, evaluate it, and pass it into child component [] -->
-  <!-- "thingsToDo is a reference to an expression that gets evaluated in the parent" -->
-  <!-- <app-to-do-list [thingsToDo]="thingsToDo"></app-to-do-list> -->
+<router-outlet></router-outlet>
 
-  <!-- How are we going to handle events? -->
-  <!-- I wnat to get the things called newItem, call method called onNewItem, magic is $(event) means whatever event just arrived, pass it into the method onNewItem -->
-  <app-generic-input (newItem)="onNewItem($event)"></app-generic-input>
+<!-- MOVED BELOW TO TODOPAGE COMPONENT -->
+
+<!-- <h1> -->
+  <!-- The double curly braces around title mean go and interpolate the value of that variable into the html right here -->
+  <!-- Welcome to {{title}}! 
+</h1>
+<app-to-do-list></app-to-do-list> -->
+
+<!-- I want to pass whatevers on the right, evaluate it, and pass it into child component [] -->
+<!-- "thingsToDo is a reference to an expression that gets evaluated in the parent" -->
+<!-- <app-to-do-list [thingsToDo]="thingsToDo"></app-to-do-list> -->
+
+<!-- How are we going to handle events? -->
+<!-- I wnat to get the things called newItem, call method called onNewItem, magic is $(event) means whatever event just arrived, pass it into the method onNewItem -->
+<!-- <app-generic-input (newItem)="onNewItem($event)"></app-generic-input> -->
  
 

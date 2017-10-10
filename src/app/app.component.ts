@@ -17,11 +17,13 @@ export class AppComponent {
     'Learn Typescript'
   ];
 
-  constructor(private toDoService: ToDoService) {}
+  // MOVED TO TODOPAGE COMPONENT.TS FILE
+  
+  // constructor(private toDoService: ToDoService) {}
 
-  onNewItem(item: string) {
-    this.toDoService.addItem(item);
-  }
+  // onNewItem(item: string) {
+  //   this.toDoService.addItem(item);
+  // }
 
   // constructor() {
   //   //if you define a function with fat arrow syntax, you get more consisten behavior
